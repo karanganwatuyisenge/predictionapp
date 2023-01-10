@@ -78,25 +78,27 @@
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Login Here!</h2>
 
-              <form>
-
+              <form method="post">
+                {% csrf_token %}
+                       
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="form3Example1cg">Your Phone Number</label>
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example1cg">Username</label>
+                  <input type="text" name="username" id="form3Example1cg" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example4cg">Password</label>
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <input type="password" name="password" id="form3Example4cg" class="form-control form-control-lg" />
                 </div>
 
 
                 <div class="d-flex justify-content-center">
-                  <button type="button"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Sign-In</button>
+                  <input type="submit" value="Submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                  <!-- <button type="button"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Sign-In</button> -->
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0">Don't you Have  an account? <a href="{% url 'register' %}"
+                <p class="text-center text-muted mt-5 mb-0">Don't you Have  an account? <a href="{% url 'registration' %}"
                     class="fw-bold text-body"><u>Register here</u></a></p>
 
               </form>

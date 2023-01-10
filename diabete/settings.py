@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'diabete.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'prediction',
+        'NAME': 'prediction_db',
         'USER': 'postgres',
         'PASSWORD': 'hello',
         'HOST': 'localhost',
@@ -132,5 +132,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 LOGIN_URL  = '/auth/login'
-
+AUTH_USER_MODEL = 'prediction.User'
 LOGOUT_REDIRECT_URL = '/'

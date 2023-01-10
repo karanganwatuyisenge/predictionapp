@@ -82,9 +82,31 @@
                 {% csrf_token %}
 
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="form3Example3cg">Your Phone Number</label>
-                  <input type="number" name="phone" id="form3Example3cg" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example3cg">First Name</label>
+                  <input type="text" name="first_name" id="form3Example3cg" class="form-control form-control-lg" />
                 </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3cg">Last Name</label>
+                <input type="text" name="last_name" id="form3Example3cg" class="form-control form-control-lg" />
+              </div>
+              <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example3cg">Username</label>
+              <input type="text" name="username" id="form3Example3cg" class="form-control form-control-lg" />
+            </div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example3cg">Gender</label>
+              <select class="form-select" placeholder="gender"  name="gender">
+                <option selected>Select Gender</option>
+                  <option >Female</option>
+                  <option >Male</option>
+
+              </select>
+              </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3cg">Your Phone Number</label>
+                <input type="number" name="phone" id="form3Example3cg" class="form-control form-control-lg" />
+              </div>
 
                 <div class="form-outline mb-4">
                     <label class="form-label" for="form3Example4cg">Password</label>

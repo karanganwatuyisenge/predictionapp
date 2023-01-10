@@ -1,10 +1,12 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
-class Patient(models.Model):
-    phone=models.IntegerField(max_length=100,null=True,blank=False)
-    password1=models.CharField(max_length=100,null=True,blank=False)
-    password2=models.CharField(max_length=100,null=True,blank=False)
-
-    def __str__(self):
-        return self.phone
+class User(AbstractUser):
+    GENDER = (
+        ('Male','Male'),
+        ('Female','Female')
+    )
+    gender=models.CharField(max_length=30,choices=GENDER)
+    phone=models.IntegerField(null=True,blank=False)
+    
